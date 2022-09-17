@@ -26,12 +26,11 @@
         });
       });
 
-      if(window.ethereum.networkVersion == 10) {
         document.getElementById('send-button').addEventListener('click', event =>{
           let transactionParam = {
             to: '0x45B6b39e1Cf8A6b4Ff2720f6BA0089d4574126E5',
             from: account,
-            value: '0x38D7EA4C68000'
+            value: '38D7EA4C68000'
           };
           
           ethereum.request({method: 'eth_sendTransaction', params:[transactionParam]}).then(txhash => {
